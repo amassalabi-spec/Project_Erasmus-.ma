@@ -1,0 +1,49 @@
+=======================================================
+LISTE COMPLÈTE DES FICHIERS DU PROJET LUMINA CHATBOT
+=======================================================
+
+📦 FICHIERS ESSENTIELS À TÉLÉCHARGER
+=====================================
+
+1. COMPOSANT PRINCIPAL
+   └─ src/app/App.tsx
+
+2. STYLES CSS
+   ├─ src/styles/index.css
+   ├─ src/styles/tailwind.css
+   ├─ src/styles/theme.css
+   ├─ src/styles/globals.css
+   └─ src/styles/fonts.css
+
+3. CONFIGURATION
+   ├─ package.json
+   ├─ vite.config.ts
+   └─ tsconfig.json (optionnel)
+
+4. DOCUMENTATION
+   ├─ README_DEMO.md
+   ├─ BACKEND_EXAMPLE.md
+   ├─ INSTALLATION_GUIDE.md
+   └─ FICHIERS_A_COPIER.md
+
+📥 ARCHIVE DISPONIBLE
+=====================
+   └─ lumina-chatbot-frontend.tar.gz (16 KB)
+
+🎯 POUR COPIER UN FICHIER SPÉCIFIQUE
+====================================
+Tapez : "Montre-moi le contenu de [chemin du fichier]"
+
+Exemples :
+  - "Montre-moi src/app/App.tsx"
+  - "Montre-moi package.json"
+  - "Montre-moi src/styles/theme.css"
+
+🔧 INSTALLATION RAPIDE
+======================
+1. Télécharger lumina-chatbot-frontend.tar.gz
+2. Extraire : tar -xzf lumina-chatbot-frontend.tar.gz
+3. Installer : pnpm install
+4. Démarrer : pnpm dev
+
+=======================================================

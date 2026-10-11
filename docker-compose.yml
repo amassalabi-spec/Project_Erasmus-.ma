@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: lumina-backend
+    ports:
+      - "3000:3000"
+    volumes:
+      # On monte les dossiers locaux dans le conteneur pour ne pas avoir à copier les gros modèles
+      - ./data:/app/data
+      - ./db_rag:/app/db_rag
+      - ./models:/app/models
+    # On précise comment lancer si besoin, mais le Dockerfile le fait déjà
+    command: uvicorn backend.main:app --host 0.0.0.0 --port 3000
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: "./ChatBot2"
+      dockerfile: Dockerfile
+    container_name: lumina-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

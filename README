@@ -1,0 +1,42 @@
+Lumina : Assistant Intelligent pour Erasmus+ Maroc
+Description
+Lumina est une solution d'assistance intelligente basée sur l'architecture RAG (Retrieval-Augmented Generation), conçue pour automatiser et fiabiliser la gestion documentaire du programme Erasmus+ Maroc. Le système résout le problème de saturation des services administratifs en répondant instantanément aux questions des étudiants et établissements, garantissant une souveraineté totale des données par un fonctionnement 100% local.
+
+Fonctionnalités principales
+Recherche Sémantique Hybride : Interrogation intelligente du corpus avec filtrage dynamique par profil utilisateur.
+
+Optimisation des Réponses : Utilisation de l'algorithme MMR pour garantir des réponses variées et pertinentes, sans répétitions.
+
+Semantic Caching : Mise en cache des questions fréquentes permettant une réponse instantanée (~0s) tout en préservant les ressources CPU.
+
+Supervision & MLOps : Dashboard d'administration permettant le suivi des logs d'erreurs et l'amélioration continue de la base de connaissances.
+
+Technologies utilisées
+Langage : Python 3.13, React.
+
+IA/Data : LangChain, ChromaDB, Phi-3 Mini (Quantification 4-bits GGUF).
+
+Outils : Docker, Docker Compose, FastAPI, Server-Sent Events (SSE).
+
+Installation / Démarrage
+Cloner le dépôt :
+git clone https://github.com/ton-nom/Lumina-Erasmus-RAG.git
+
+Installer les dépendances :
+pip install -r requirements.txt
+
+Important (Modèles IA) : Ce dépôt ne contient pas le modèle. Téléchargez le fichier Phi-3-mini-4k-instruct-q4.gguf sur HuggingFace et placez-le dans le dossier /models.
+
+Lancement :
+docker-compose up --build
+
+Structure du projet
+Plaintext
+Lumina/
+├── backend/            # API FastAPI et logique RAG
+├── ChatBot/            # Interface React
+├── data/               # Documents sources (PDF, JSONL)
+├── db_rag/             # Base ChromaDB persistante
+├── models/             # Modèles GGUF (Phi-3)
+├── utils/              # Scripts d'ingestion et de nettoyage
+└── docker-compose.yml  # Orchestration des services

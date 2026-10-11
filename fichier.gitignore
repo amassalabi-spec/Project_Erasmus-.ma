@@ -1,0 +1,23 @@
+# --- Environnement Python ---
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# --- Modèles IA (Très lourds) ---
+/models/*.gguf
+/models/*.bin
+
+# --- Bases de données (Locales et lourdes) ---
+/db_rag/
+/db_cache/
+
+# --- Données sources (Optionnel) ---
+# Si tu ne veux pas publier tes PDF officiels sur un repo public
+/data/*.pdf
+
+# --- Fichiers système et IDE ---
+.DS_Store
+.vscode/
+.idea/
+.env # TRÈS IMPORTANT : tes clés d'API (si tu en as) ne doivent JAMAIS être commitées

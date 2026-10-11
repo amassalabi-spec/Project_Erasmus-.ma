@@ -1,0 +1,11 @@
+node_modules
+dist
+.vscode
+.git
+.DS_Store
+db_rag/
+data/
+models/
+Lumina.ipynb
+Lumina_RAG.ipynb
+*.md

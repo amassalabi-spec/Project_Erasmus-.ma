@@ -1,0 +1,7 @@
+tqdm
+chromadb
+sentence-transformers
+langdetect
+ctransformers
+tqdm
+regex
